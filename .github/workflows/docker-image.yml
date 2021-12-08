@@ -1,5 +1,5 @@
 name: Publish Docker image
-
+# Reference: https://github.com/marketplace/actions/docker-metadata-action#semver
 on:
   push:
     branches:
