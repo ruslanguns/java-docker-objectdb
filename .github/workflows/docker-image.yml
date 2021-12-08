@@ -6,9 +6,24 @@ on:
       - 'main'
     tags:
       - 'v*'
+    paths-ignore:
+      - .github/**
+      - 'data/**'
+      - '.env'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
+      
   pull_request:
     branches:
       - 'main'
+    paths-ignore:
+      - .github/**
+      - 'data/**'
+      - '.env'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
 
 jobs:
   docker:
