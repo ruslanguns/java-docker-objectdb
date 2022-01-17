@@ -9,3 +9,4 @@ services:
     environment:
       DB_USERNAME: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}
+      DB_ACTIVATION_CODE: ${DB_ACTIVATION_CODE}
