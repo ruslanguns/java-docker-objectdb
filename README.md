@@ -12,7 +12,7 @@ This repository has a basic configuration for running a server instance of Objec
 ### Build Image
 
 ```bash
-docker build -t ruslanguns/java-objectdb:latest .
+docker build -t ruslanguns/java-objectdb:<TAG NAME> .
 ```
 
 ### Create container
