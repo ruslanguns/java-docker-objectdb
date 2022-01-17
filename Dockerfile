@@ -3,6 +3,7 @@ FROM openjdk:11.0.13-slim-buster
 ENV DB_PORT=6136
 ENV DB_USERNAME=admin
 ENV DB_PASSWORD=admin
+ENV DB_ACTIVATION_CODE=
 
 RUN apt-get update && apt-get install -y wget unzip vim
 

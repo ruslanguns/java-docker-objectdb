@@ -5,6 +5,7 @@ chmod u+x server.sh
 sed -i 's/DB_PORT/'"$DB_PORT"'/g' config.xml
 sed -i 's/DB_USERNAME/'"$DB_USERNAME"'/g' config.xml
 sed -i 's/DB_PASSWORD/'"$DB_PASSWORD"'/g' config.xml
+sed -i 's/DB_ACTIVATION_CODE/'"$DB_ACTIVATION_CODE"'/g' config.xml
 
 rm -rf ../tutorials
 rm -rf ../doc

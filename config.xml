@@ -16,6 +16,7 @@
     <processing cache="64mb" max-threads="10" />
     <query-cache results="32mb" programs="500" />
     <extensions drop="temp,tmp" memory="mem" />
+    <activation code="DB_ACTIVATION_CODE" />
   </database>
 
   <entities>
