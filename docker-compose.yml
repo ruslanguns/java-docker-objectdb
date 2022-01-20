@@ -1,11 +1,13 @@
 version: "3.1"
 services:
   db:
+    container_name: objectdb
     build: .
     ports:
       - "${PORT-6136}:6136"
     volumes:
       - ./data:/home/user/db
+    mac_address: ${MAC_ADDRESS}
     environment:
       DB_USERNAME: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}

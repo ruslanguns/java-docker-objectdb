@@ -28,6 +28,27 @@ docker-compose up # If you want to run standalone OR
 docker-compose up -d # If you want to run as daemon
 ```
 
+## Activation process
+
+Since ObjectDB relies on MAC for activation process, and if we want to deploy using docker we can bypass the mac or use an specific mac address from where the licecence was activated.
+
+First we need to activate licence using credentials, we can launch the docker and use it to activate the instance (after this process we need to destroy docker and recreate with the activation token):
+
+```bash
+docker exec -u 0 -it <CONTAINER NAME> java -cp objectdb.jar com.objectdb.Activator
+```
+
+Then we need to follow up the instructions and get the new activation code.
+
+> Keep in mind that you must have a valid activation key to create an activation token.
+
+With the activation token we need to add this to the docker-compose and then run
+
+```bash
+docker-compose down
+docker-compose up -d --force-recreate
+```
+
 ## Limitations
 
 Feel free to edit the config.xml file to change the configuration, but be careful with the environment variables "DB_PORT", "DB_USERNAME" and "DB_PASSWORD", since if you change them you will need to update the dockerfile and docker-compose.yml file to make it dynamic (you can see the entrypoint where I'm replacing coincidences).
